@@ -26,8 +26,8 @@ export interface FireworksEvent {
 export interface ViewingVenue {
   id: string;
   name: string;
-  type: 'paid' | 'free' | 'special';
-  side: 'edogawa' | 'ichikawa';
+  type: 'paid' | 'free' | 'special' | 'shopping';
+  side: 'edogawa' | 'ichikawa' | 'both';
   coordinates: {
     lat: number;
     lng: number;
