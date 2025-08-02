@@ -90,18 +90,6 @@ export function Contact() {
                 </h3>
                 
                 <div className="space-y-3 mb-6">
-                  <div className="flex items-center">
-                    <span className="text-green-600 mr-3">📞</span>
-                    <div>
-                      <div className="font-medium text-gray-900">電話番号</div>
-                      <a 
-                        href={`tel:${contact.phone}`}
-                        className="text-blue-600 text-xl font-bold hover:underline"
-                      >
-                        {contact.phone}
-                      </a>
-                    </div>
-                  </div>
                   
                   <div className="flex items-center">
                     <span className="text-blue-600 mr-3">🌐</span>
@@ -197,11 +185,11 @@ export function Contact() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
               <div>
-                <h4 className="font-bold text-yellow-700 mb-2">電話でのお問い合わせ</h4>
+                <h4 className="font-bold text-yellow-700 mb-2">ウェブサイトでの情報確認</h4>
                 <ul className="space-y-1 text-yellow-700">
-                  <li>• 受付時間内にお電話ください</li>
-                  <li>• 開催直前は電話が混雑します</li>
-                  <li>• 緊急時以外は平日の利用をお勧めします</li>
+                  <li>• 最新情報は公式サイトをご確認ください</li>
+                  <li>• 開催直前は情報更新が頻繁になります</li>
+                  <li>• SNSでもリアルタイム情報を配信</li>
                 </ul>
               </div>
               <div>

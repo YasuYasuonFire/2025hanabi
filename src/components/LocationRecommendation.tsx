@@ -114,20 +114,20 @@ export function LocationRecommendation() {
                   <div>
                     <h4 className="text-xl font-bold mb-3">{recommendation.venue.name}</h4>
                     <div className="space-y-3">
-                      <div className="flex items-center text-sm">
+                      <div className="flex items-center text-base">
                         <span className="w-4 h-4 bg-green-500 rounded-full mr-2"></span>
-                        <span className="font-medium">距離:</span>
-                        <span className="ml-2">{(recommendation.distance / 1000).toFixed(1)}km</span>
+                        <span className="font-medium text-gray-900">距離:</span>
+                        <span className="ml-2 text-gray-800 font-semibold">{(recommendation.distance / 1000).toFixed(1)}km</span>
                       </div>
-                      <div className="flex items-center text-sm">
+                      <div className="flex items-center text-base">
                         <span className="w-4 h-4 bg-blue-500 rounded-full mr-2"></span>
-                        <span className="font-medium">最寄り駅:</span>
-                        <span className="ml-2">{recommendation.venue.accessInfo.nearestStation}</span>
+                        <span className="font-medium text-gray-900">最寄り駅:</span>
+                        <span className="ml-2 text-gray-800 font-semibold">{recommendation.venue.accessInfo.nearestStation}</span>
                       </div>
-                      <div className="flex items-center text-sm">
+                      <div className="flex items-center text-base">
                         <span className="w-4 h-4 bg-orange-500 rounded-full mr-2"></span>
-                        <span className="font-medium">徒歩:</span>
-                        <span className="ml-2">{recommendation.venue.accessInfo.walkingTime}分</span>
+                        <span className="font-medium text-gray-900">徒歩:</span>
+                        <span className="ml-2 text-gray-800 font-semibold">{recommendation.venue.accessInfo.walkingTime}分</span>
                       </div>
                     </div>
                     
@@ -135,9 +135,9 @@ export function LocationRecommendation() {
                       <h5 className="font-bold mb-2">おすすめ理由</h5>
                       <ul className="space-y-1">
                         {recommendation.reasons.map((reason, index) => (
-                          <li key={index} className="text-sm text-gray-600 flex items-start">
-                            <span className="text-green-600 mr-2">✓</span>
-                            {reason}
+                          <li key={index} className="text-base text-gray-800 flex items-start">
+                            <span className="text-green-600 mr-2 font-bold">✓</span>
+                            <span className="font-medium">{reason}</span>
                           </li>
                         ))}
                       </ul>
@@ -165,9 +165,9 @@ export function LocationRecommendation() {
                       <h5 className="font-bold mb-2">代替案</h5>
                       <div className="space-y-2">
                         {recommendation.alternatives.slice(0, 2).map((venue) => (
-                          <div key={venue.id} className="p-3 bg-gray-50 rounded-lg text-sm">
-                            <div className="font-medium">{venue.name}</div>
-                            <div className="text-gray-600">{venue.accessInfo.nearestStation}から徒歩{venue.accessInfo.walkingTime}分</div>
+                          <div key={venue.id} className="p-3 bg-gray-50 rounded-lg text-base">
+                            <div className="font-semibold text-gray-900">{venue.name}</div>
+                            <div className="text-gray-700 font-medium">{venue.accessInfo.nearestStation}から徒歩{venue.accessInfo.walkingTime}分</div>
                           </div>
                         ))}
                       </div>
